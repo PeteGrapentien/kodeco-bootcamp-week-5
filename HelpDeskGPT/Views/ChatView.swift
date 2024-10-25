@@ -34,7 +34,10 @@ import SwiftUI
 
 struct ChatView: View {
   
-  var client = GPTClient(model: .gpt35Turbo)
+  var client = GPTClient(
+    model: .gpt35Turbo,
+    context: .makeContext("Your name is Earl and you are a mechanic. Only answer questions related to car repair.")
+  )
   
   @State var messages: [GPTMessage] = [
     GPTMessage(role: .assistant, content: "Hello, how can I help you today?")
