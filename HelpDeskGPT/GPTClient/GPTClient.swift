@@ -41,8 +41,8 @@ class GPTClient {
   private let encoder: JSONEncoder
   private let decoder: JSONDecoder
   private let urlSession: URLSession
-  
-  init(apiKey: String = ProcessInfo.processInfo.environment["OPENAI_API_KEY"] ?? "MISSING API KEY",
+  //NOTE: INPUT YOUR API KEY BELOW
+  init(apiKey: String = "",
        model: GPTModelVersion,
        context: [GPTMessage] = [],
        urlSession: URLSession = .shared) {
